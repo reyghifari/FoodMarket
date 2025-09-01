@@ -21,7 +21,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "core"
+            baseName = "feature"
             isStatic = true
         }
     }
@@ -41,12 +41,13 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(project(path = ":core"))
         }
     }
 }
 
 android {
-    namespace = "com.raihan.core"
+    namespace = "com.raihan.auth"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
