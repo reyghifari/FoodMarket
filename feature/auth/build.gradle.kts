@@ -46,6 +46,8 @@ kotlin {
             implementation(libs.auth.kmp)
             implementation(libs.auth.firebase.kmp)
             implementation(libs.messagebar.kmp)
+            implementation(libs.compose.navigation)
+
         }
     }
 }
