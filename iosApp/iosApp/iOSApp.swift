@@ -24,17 +24,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        // WAJIB: inisialisasi Firebase sebelum Auth dipakai
         FirebaseApp.configure()
         return true
-    }
-
-    // Alternatif: handle URL di sini (hapus onOpenURL di atas agar tak dobel)
-    func application(
-        _ app: UIApplication,
-        open url: URL,
-        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
-        GIDSignIn.sharedInstance.handle(url)
     }
 }

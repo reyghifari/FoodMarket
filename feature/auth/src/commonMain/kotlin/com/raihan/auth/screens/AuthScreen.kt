@@ -1,6 +1,5 @@
 package com.raihan.auth.screens
 
-import MessageBarState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -25,6 +24,8 @@ import com.raihan.core.FoodColor
 import com.raihan.core.FoodFont
 import com.raihan.core.Resources
 import com.raihan.core.components.FoodButton
+import com.raihan.core.components.FoodToast
+import com.raihan.core.components.ToastType
 import com.raihan.core.extentions.skeletonLoading
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -59,11 +60,11 @@ fun AuthScreen() {
                 linkAccount = false,
                 onResult = { result ->
                     result.onSuccess { user ->
-                        MessageBarState().addSuccess("Sign In Success ${user?.displayName}")
+                        FoodToast.show("Sign In Success ${user?.displayName}")
                         loadingSignIn = false
                     }
                     result.onFailure { error ->
-                        MessageBarState().addError(error.message ?: "Unknown Error")
+                        FoodToast.show("Sign In Failed $error", ToastType.ERROR)
                         loadingSignIn = false
                     }
                 }

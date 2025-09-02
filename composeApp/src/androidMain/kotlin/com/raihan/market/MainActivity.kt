@@ -29,7 +29,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         setContent {
-            App()
+            var appReady by remember { mutableStateOf(false) }
+
+            LaunchedEffect(Unit) {
+                GoogleAuthProvider.create(
+                    credentials = GoogleAuthCredentials("394639372535-9d1gt5a667j15l3kl8q9cppovjglthnr.apps.googleusercontent.com")
+                )
+                appReady = true
+            }
+
+            AnimatedVisibility(
+                modifier = Modifier.fillMaxSize(),
+                visible = appReady
+            ) {
+                App()
+            }
         }
     }
 }
