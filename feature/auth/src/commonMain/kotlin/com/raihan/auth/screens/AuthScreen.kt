@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.mmk.kmpauth.firebase.google.GoogleButtonUiContainerFirebase
 import com.raihan.core.FoodColor
 import com.raihan.core.FoodFont
@@ -27,10 +28,9 @@ import com.raihan.core.components.FoodButton
 import com.raihan.core.components.FoodToast
 import com.raihan.core.components.ToastType
 import com.raihan.core.extentions.skeletonLoading
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-fun AuthScreen() {
+fun AuthScreen(navController: NavHostController) {
 
     var loadingSignIn by remember { mutableStateOf(false) }
 
@@ -83,10 +83,4 @@ fun AuthScreen() {
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
-}
-
-@Composable
-@Preview
-fun PreviewAuth() {
-    AuthScreen()
 }
