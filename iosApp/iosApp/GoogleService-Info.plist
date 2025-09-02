@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>394639372535-s1ulpgi34splis2ccolfefb83s8k0mej.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.394639372535-s1ulpgi34splis2ccolfefb83s8k0mej</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>394639372535-7ei9qelk3qqer5pnbqiigfp9r2vr1v6b.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyANSlRVw94XvIzFHx9oLZMA-HNQvCx6oIY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>394639372535</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.raihan.market.FoodMarket</string>
+	<key>PROJECT_ID</key>
+	<string>food-market-470408</string>
+	<key>STORAGE_BUCKET</key>
+	<string>food-market-470408.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:394639372535:ios:50410630c58e2116c3e3f2</string>
+</dict>
+</plist>

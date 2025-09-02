@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "394639372535",
+    "project_id": "food-market-470408",
+    "storage_bucket": "food-market-470408.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394639372535:android:2f1509cb8cf06d5ac3e3f2",
+        "android_client_info": {
+          "package_name": "com.raihan.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394639372535-7ei9qelk3qqer5pnbqiigfp9r2vr1v6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raihan.market",
+            "certificate_hash": "b375c830876ace32f49a2168a9e9fafc74c0faa1"
+          }
+        },
+        {
+          "client_id": "394639372535-9d1gt5a667j15l3kl8q9cppovjglthnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI0ovon8Zu40-kxYGUXanOsndBD_T2OeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394639372535-9d1gt5a667j15l3kl8q9cppovjglthnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

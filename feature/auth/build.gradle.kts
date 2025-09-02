@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.serialization)
+    alias(libs.plugins.google.services)
 }
 
 kotlin {
@@ -42,6 +43,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(project(path = ":core"))
+            implementation(libs.auth.kmp)
+            implementation(libs.auth.firebase.kmp)
+            implementation(libs.messagebar.kmp)
         }
     }
 }
