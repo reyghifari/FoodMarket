@@ -28,7 +28,9 @@ dependencyResolutionManagement {
     }
 }
 
+include(":data")
 include(":composeApp")
+include(":di")
 include(":core")
 include(":feature:auth")
 include(":navigation")

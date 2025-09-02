@@ -27,11 +27,11 @@ import com.raihan.core.components.FoodButton
 import com.raihan.core.components.FoodToast
 import com.raihan.core.components.ToastType
 import com.raihan.core.extentions.skeletonLoading
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun AuthScreen(onSuccess : () -> Unit) {
-
+    val viewModel = koinViewModel<AuthViewModel>()
     var loadingSignIn by remember { mutableStateOf(false) }
 
     Box(
@@ -60,9 +60,18 @@ fun AuthScreen(onSuccess : () -> Unit) {
                 linkAccount = false,
                 onResult = { result ->
                     result.onSuccess { user ->
-                        FoodToast.show("Sign In Success ${user?.displayName}")
-                        loadingSignIn = false
-                        onSuccess()
+                        viewModel.createCustomer(
+                            user,
+                            onSuccess = {
+                                onSuccess()
+                                FoodToast.show("Sign In Success ${user?.displayName}")
+                                loadingSignIn = false
+                            },
+                            onError = { error ->
+                                FoodToast.show("Error $error", ToastType.ERROR)
+                                loadingSignIn = false
+                            }
+                        )
                     }
                     result.onFailure { error ->
                         FoodToast.show("Sign In Failed $error", ToastType.ERROR)

@@ -28,11 +28,6 @@ kotlin {
     }
 
     sourceSets {
-        androidMain.dependencies {
-            implementation(compose.preview)
-            implementation(libs.androidx.activity.compose)
-            implementation(libs.splash.screen)
-        }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -42,11 +37,15 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(project(path = ":core"))
             implementation(libs.auth.kmp)
             implementation(libs.auth.firebase.kmp)
             implementation(libs.messagebar.kmp)
             implementation(libs.compose.navigation)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
+            implementation(project(path = ":core"))
+            implementation(project(path = ":data"))
+
 
         }
     }
